@@ -176,6 +176,28 @@
     text-decoration: underline;
   }
 
+  /* Стилизация вертикального скроллбара */
+  ::-webkit-scrollbar {
+      width: 0.5rem;  /* 8px */
+  }
+
+  /* Фон скроллбара */
+  ::-webkit-scrollbar-track {
+      background: var(--very-light-beige);
+      border-radius: 0.25rem;  /* 4px */
+  }
+
+  /* Ползунок */
+  ::-webkit-scrollbar-thumb {
+      background: var(--medium-brown);
+      border-radius: 0.25rem;  /* 4px */
+      border: 0.125rem solid var(--very-light-beige);  /* 2px */
+  }
+
+  /* Ползунок при наведении */
+  ::-webkit-scrollbar-thumb:hover {
+      background: var(--dark-brown);
+  }
 
   footer {
     width: 100%;
@@ -203,4 +225,36 @@ footer p {
       max-width: 90%;
     }
   }
-  
+
+/* Фиксированные header и footer */
+header, footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--minty-pastel-green);
+}
+
+header {
+    top: 0;
+    height: 4.5rem; /* 72px */
+    border-bottom: 0.125rem solid var(--dark-brown);
+}
+
+footer {
+    bottom: 0;
+    height: 3rem; /* 48px */
+    padding: 0.5rem 2.5rem; /* 8px 40px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.125rem solid var(--medium-brown);
+}
+
+/* Основной контейнер */
+main {
+    margin-top: 4.5rem;    /* Равно высоте header */
+    margin-bottom: 3rem;   /* Равно высоте footer */
+    min-height: calc(100vh - 7.5rem); /* 100vh минус суммарная высота header и footer */
+    overflow-y: auto;
+}

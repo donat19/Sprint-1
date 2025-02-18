@@ -18,22 +18,21 @@
     /* Контейнер для всех карточек */
     .cards-container {
       display: grid;                        /* Включаем Grid Layout */
-      grid-template-columns: repeat(2, 315px); /* Два столбца фиксированной ширины 315px */
+      grid-template-columns: repeat(2, 600px); /* Два столбца фиксированной ширины 315px */
       gap: 20px;                            /* Расстояние между карточками (по вертикали и горизонтали) */
       justify-content: center;              /* Выравниваем карточки по центру контейнера */
       margin: 0 auto;                       /* Горизонтально центрируем весь блок, если у контейнера будет ширина */
-      padding: 20px;                        /* Внешние отступы (по желанию) */
-      background-color: var(--very-light-beige); /* Фон всей области (не обязательно) */
+      padding: 10px;                        /* Внешние отступы (по желанию) */
     }
 
     /* Общий стиль для каждой карточки */
     .coffee-card {
-      width: 315px;             /* Ширина карточки */
+      width: 600px;             /* Ширина карточки */
       height: 373px;            /* Высота карточки */
       display: flex;            /* Располагаем текст и картинку в строку */
       background-color: var(--minty-pastel-green);   /* Фон карточки */
       border: 1px solid var(--medium-brown);   /* Легкая рамка */
-      border-radius: 8px;       /* Скругление углов */
+      border-radius: 20px;       /* Скругление углов */
       overflow: hidden;         /* Скрыть «выходящие» части */
       box-sizing: border-box;   /* Учитывать рамки и паддинги внутри total width/height */
       font-family: sans-serif;  /* Шрифт по умолчанию */
@@ -63,7 +62,7 @@
 
     /* Блок с картинкой (справа) */
     .coffee-image {
-      width: 50%;               /* Половина карточки */
+      width: 313px;               /* Половина карточки */
       height: 373px;           /* Фиксированная высота равная высоте карточки */
       display: flex;
       justify-content: center;  
@@ -101,8 +100,8 @@
         <div class="coffee-card">
             <div class="coffee-text">
                 <h2>Cappuccino</h2>
-                <p>Классическое сочетание насыщенного эспрессо и воздушной молочной пены. 
-                   Каждый глоток – гармония вкуса и текстуры, дарящая тепло и комфорт.</p>
+                <p>
+                    A classic blend of bold espresso and velvety milk foam. Every sip is a harmony of taste and texture, wrapping you in warmth and comfort.</p>
             </div>
             <div class="coffee-image">
                 <img src="/image/cappuccino.jpg" alt="Cappuccino">
@@ -113,8 +112,8 @@
         <div class="coffee-card">
           <div class="coffee-text">
             <h2>Espresso</h2>
-            <p>Небольшая чашка с интенсивным вкусом. Этот насыщенный кофе – 
-               истинное воплощение итальянской кофейной культуры.</p>
+            <p>
+             A small cup packed with bold energy. This rich, intense drink is the essence of true coffee craftsmanship, inspiring from the very first sip.</p>
           </div>
           <div class="coffee-image">
             <img src="/image/espresso.jpg" alt="Espresso">
@@ -125,8 +124,7 @@
         <div class="coffee-card">
           <div class="coffee-text">
             <h2>Mocha</h2>
-            <p>Ароматная смесь эспрессо, шоколада и молока, создающая нежную сладость 
-               с легкой горчинкой и мягкой текстурой.</p>
+            <p>A rich fusion of espresso, chocolate, and milk, creating a decadent treat for the senses. Sweet and bold, it’s a moment of indulgence in every sip.</p>
           </div>
           <div class="coffee-image">
             <img src="/image/mocha.jpg" alt="Mocha">
@@ -137,8 +135,7 @@
         <div class="coffee-card">
           <div class="coffee-text">
             <h2>Latte</h2>
-            <p>Мягкий и шелковистый, латте сочетает в себе легкую горечь эспрессо 
-               и деликатную сливочность молока.</p>
+            <p>Smooth and soothing, a latte is the perfect balance of robust espresso and creamy frothed milk. A gentle invitation to savor life’s little pleasures.</p>
           </div>
           <div class="coffee-image">
             <img src="/image/latte.jpg" alt="Latte">
