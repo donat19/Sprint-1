@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Настройки профиля</title>
+  <!-- Подключаем CSS-файл со стилями -->
+  <link rel="stylesheet" href="/pges/main.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <div class="header-container">
+      <!-- Блок навигации -->
+      <nav class="nav-links">
+        <!-- Логотип (можно заменить на свою картинку) -->
+        <img class="logo" src="/image/logo.jpg" alt="Логотип">
+        
+        <a href="/pges/menu/menu.html">MENU</a>
+        <a href="/pges/menu/about.html">ORDER</a>
+      </nav>
+
+      <!-- Кнопки аккаунта (пример) -->
+      <div class="account-controls">
+        <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
+        <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main>
+    <!-- Контейнер, чтобы расположить «Settings» слева и «Personal Information» справа -->
+    <div style="display: flex; max-width: 1200px; margin: 0 auto; padding: 1rem;">
+      
+      <!-- Блок «Settings» слева -->
+      <aside style="flex: 0 0 200px; margin-right: 2rem; text-align: center;">
+        <!-- Круглая иконка (пример) -->
+        <div style="
+          width: 80px; 
+          height: 80px; 
+          border-radius: 50%; 
+          background-color: var(--dark-brown); 
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          margin: 0 auto 0.5rem;
+        ">
+          <span style="color: var(--very-light-beige); font-size: 2rem;">+</span>
+        </div>
+        <!-- Надпись «Settings» -->
+        <h3>Settings</h3>
+      </aside>
+
+      <!-- Карточка с формой «Personal Information» -->
+      <section class="card" style="flex: 1;">
+        <h2>Personal Information</h2>
+        
+        <!-- Поле «First Name» -->
+        <label for="first-name" style="font-weight: bold;">First Name</label>
+        <input type="text" id="first-name" placeholder="Enter your first name">
+        
+        <!-- Поле «Last Name» -->
+        <label for="last-name" style="font-weight: bold;">Last Name</label>
+        <input type="text" id="last-name" placeholder="Enter your last name">
+        
+        <!-- Поле «Password» -->
+        <label for="password" style="font-weight: bold;">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <!-- Кнопка сохранения -->
+        <button style="margin-top: 1rem;">Save</button>
+      </section>
+    </div>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer>
+    <p>© 2025 My Website</p>
+    <p class="email">info@mywebsite.com</p>
+  </footer>
+
+</body>
+</html>
