@@ -3,50 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Настройки профиля</title>
-  <link rel="stylesheet" href="/pages/main.css">
+  <!-- Подключаем CSS-файл со стилями -->
+  <link rel="stylesheet" href="/pges/main.css">
+  <script src="account.js" defer></script>
 </head>
 <body>
+
+  <!-- Шапка сайта -->
   <header>
     <div class="header-container">
+      <!-- Блок навигации -->
       <nav class="nav-links">
-        <img class="logo" src="/images/logo.jpg" alt="Логотип">
-        <a href="/pages/menu/menu.html">MENU</a>
-        <a href="/pages/menu/about.html">ORDER</a>
+        <!-- Логотип (можно заменить на свою картинку) -->
+        <img class="logo" src="/image/logo.jpg" alt="Логотип">
+        
+        <a href="/pges/menu/menu.html">MENU</a>
+        <a href="/pges/menu/about.html">ORDER</a>
       </nav>
 
+      <!-- Кнопки аккаунта (пример) -->
       <div class="account-controls">
-        <button type="button" onclick="location.href='/pages/account/login.html';">LOGIN</button>
-        <button type="button" onclick="location.href='/pages/account/register.html';">SIGN IN</button>
+        <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
+        <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
       </div>
     </div>
   </header>
 
+  <!-- Основной контент -->
   <main>
-    <div class="profile-container">
-      <aside class="profile-sidebar">
-        <div class="profile-picture">
-          <span aria-hidden="true">+</span>
+    <div class="layout-container">
+      <aside class="settings-sidebar">
+        <div class="profile-icon">
+          <span>+</span>
         </div>
         <h3>Account picture</h3>
       </aside>
 
       <section class="card profile-form">
         <h2>Personal Information</h2>
-        <form>
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="firstName" placeholder="Enter your first name" required>
-          </div>
+        <form id="profile-form">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter your first name" required>
           
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="lastName" placeholder="Enter your last name" required>
-          </div>
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter your last name" required>
           
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-          </div>
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
 
           <button type="submit" class="submit-button">Save</button>
         </form>
@@ -54,9 +57,19 @@
     </div>
   </main>
 
+  <!-- Подвал сайта -->
   <footer>
     <p>Contact: +123456789</p>
     <p class="email">EXAMPLE@GMAIL.COM</p>
-  </footer>
+</footer>
+
+<script>
+    // Initialize the Account class when the document is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        const account = new Account();
+        account.init();
+    });
+</script>
+
 </body>
 </html>
