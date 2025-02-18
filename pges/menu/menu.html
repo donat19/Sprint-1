@@ -5,6 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Документ</title>
   <link rel="stylesheet" href="/pges/main.css">
+  <style>
+    /* Основные цвета и базовый размер шрифта */
+:root {
+    --dark-brown: #3A2A1A;
+    --medium-brown: #6F4F2C;
+    --light-brown: #B89F7A;
+    --very-light-beige: #D9CFBF;
+    --minty-pastel-green: #DDEAE1;
+    font-size: 16px;
+}
+    /* Контейнер для всех карточек */
+    .cards-container {
+      display: grid;                        /* Включаем Grid Layout */
+      grid-template-columns: repeat(2, 315px); /* Два столбца фиксированной ширины 315px */
+      gap: 20px;                            /* Расстояние между карточками (по вертикали и горизонтали) */
+      justify-content: center;              /* Выравниваем карточки по центру контейнера */
+      margin: 0 auto;                       /* Горизонтально центрируем весь блок, если у контейнера будет ширина */
+      padding: 20px;                        /* Внешние отступы (по желанию) */
+      background-color: var(--very-light-beige); /* Фон всей области (не обязательно) */
+    }
+
+    /* Общий стиль для каждой карточки */
+    .coffee-card {
+      width: 315px;             /* Ширина карточки */
+      height: 373px;            /* Высота карточки */
+      display: flex;            /* Располагаем текст и картинку в строку */
+      background-color: var(--minty-pastel-green);   /* Фон карточки */
+      border: 1px solid var(--medium-brown);   /* Легкая рамка */
+      border-radius: 8px;       /* Скругление углов */
+      overflow: hidden;         /* Скрыть «выходящие» части */
+      box-sizing: border-box;   /* Учитывать рамки и паддинги внутри total width/height */
+      font-family: sans-serif;  /* Шрифт по умолчанию */
+    }
+
+    /* Блок с текстом (слева) */
+    .coffee-text {
+      flex: 1;                  /* Занимает всё доступное пространство, кроме картинки */
+      padding: 15px;            /* Внутренние отступы */
+      display: flex;            
+      flex-direction: column;
+      justify-content: center;  /* Центрируем текст по вертикали */
+    }
+
+    .coffee-text h2 {
+      margin: 0 0 10px;         /* Отступ снизу у заголовка */
+      font-size: 20px;
+      color: var(--dark-brown);
+    }
+
+    .coffee-text p {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 14px;
+      color: var(--medium-brown);
+    }
+
+    /* Блок с картинкой (справа) */
+    .coffee-image {
+      width: 50%;               /* Половина карточки */
+      height: 373px;           /* Фиксированная высота равная высоте карточки */
+      display: flex;
+      justify-content: center;  
+      align-items: center;      
+      background-color: var(--light-brown);
+      overflow: hidden;         /* Предотвращает выход изображения за пределы */
+    }
+
+    .coffee-image img {
+      width: 100%;             /* Занимает всю ширину контейнера */
+      height: 100%;            /* Занимает всю высоту контейнера */
+      object-fit: cover;       /* Сохраняет пропорции, заполняя контейнер */
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -12,8 +85,8 @@
           <!-- Навигационные ссылки (слева) -->
           <div class="nav-links">
             <img class="logo" src="/image/logo.jpg" alt="Логотип">
-            <a href="/pges/menu/menu.html">HOME</a>
-            <a href="/pges/menu/about.html">ORDER</a>
+            <a href="/pges/home/home.html">HOME</a>
+            <a href="/pges/order/order.html">ORDER</a>
           </div>
           <!-- Кнопки управления аккаунтом (справа) -->
           <div class="account-controls">
@@ -21,11 +94,62 @@
             <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
           </div>
         </div>
-      </header>
+    </header>
 
-  <!-- Остальное содержимое страницы -->
-  
-</body>
+    <div class="cards-container">
+        <!-- Карточка 1 -->
+        <div class="coffee-card">
+            <div class="coffee-text">
+                <h2>Cappuccino</h2>
+                <p>Классическое сочетание насыщенного эспрессо и воздушной молочной пены. 
+                   Каждый глоток – гармония вкуса и текстуры, дарящая тепло и комфорт.</p>
+            </div>
+            <div class="coffee-image">
+                <img src="/image/cappuccino.jpg" alt="Cappuccino">
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="coffee-card">
+          <div class="coffee-text">
+            <h2>Espresso</h2>
+            <p>Небольшая чашка с интенсивным вкусом. Этот насыщенный кофе – 
+               истинное воплощение итальянской кофейной культуры.</p>
+          </div>
+          <div class="coffee-image">
+            <img src="/image/espresso.jpg" alt="Espresso">
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="coffee-card">
+          <div class="coffee-text">
+            <h2>Mocha</h2>
+            <p>Ароматная смесь эспрессо, шоколада и молока, создающая нежную сладость 
+               с легкой горчинкой и мягкой текстурой.</p>
+          </div>
+          <div class="coffee-image">
+            <img src="/image/mocha.jpg" alt="Mocha">
+          </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="coffee-card">
+          <div class="coffee-text">
+            <h2>Latte</h2>
+            <p>Мягкий и шелковистый, латте сочетает в себе легкую горечь эспрессо 
+               и деликатную сливочность молока.</p>
+          </div>
+          <div class="coffee-image">
+            <img src="/image/latte.jpg" alt="Latte">
+          </div>
+        </div>
+    </div>
+    <footer>
+        <p>Contact: +123456789</p>
+        <p class="email">EXAMPLE@GMAIL.COM</p>
+    </footer>
+</body> 
 </html>
 
 
