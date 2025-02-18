@@ -3,12 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Настройки профиля</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Подключаем CSS-файл со стилями -->
   <link rel="stylesheet" href="/pges/main.css">
   <script src="account.js" defer></script>
+  <style>
+    /* Сброс стилей и установка box-sizing */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Основной контейнер для контента */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 20px;
+      gap: 2rem;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      background-color: #B89F7A; /* Основной цвет */
+      border: 2px solid #3A2A1A; /* Цвет бордера */
+      color: #3A2A1A; /* Цвет текста */
+      padding: 0.5rem 1rem;
+      font-size: 16px;
+      border-radius: 5px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    button:hover,
+    input:focus,
+    textarea:focus,
+    select:focus {
+      background-color: #B89F7A; /* Немного затемняем при наведении */
+      border-color: #2A1A0A; /* Чуть темнее */
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:active {
+      background-color: #B89F7A;
+    }
+  </style>
 </head>
 <body>
-
   <!-- Шапка сайта -->
   <header>
     <div class="header-container">
@@ -16,38 +64,41 @@
       <nav class="nav-links">
         <!-- Логотип (можно заменить на свою картинку) -->
         <img class="logo" src="/image/logo.jpg" alt="Логотип">
-        
+        <a href="/pges/home/home.html">HOME</a>
         <a href="/pges/menu/menu.html">MENU</a>
-        <a href="/pges/menu/about.html">ORDER</a>
+        <a href="/pges/order/order.html">ORDER</a>
       </nav>
-
-      <!-- Кнопки аккаунта (пример) -->
+      <!-- Кнопки аккаунта -->
       <div class="account-controls">
         <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
-        <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
+        <button type="button" onclick="location.href='/pges/account/logout.html';">SIGNIN</button>
       </div>
     </div>
   </header>
 
   <!-- Основной контент -->
   <main>
-    <div class="layout-container">
-      <aside class="settings-sidebar">
-        <div class="profile-icon">
-          <span>+</span>
+    <div class="container">
+      <!-- Боковая панель (левый столбец) -->
+      <aside class="left">
+        <div class="settings-sidebar">
+          <div class="profile-icon">
+            <span>+</span>
+          </div>
+          <h3>Account picture</h3>
         </div>
-        <h3>Account picture</h3>
       </aside>
 
-      <section class="card profile-form">
+      <!-- Форма профиля (правый столбец) -->
+      <section class="right card profile-form">
         <h2>Personal Information</h2>
         <form id="profile-form">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name" placeholder="Enter your first name" required>
-          
+
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name" placeholder="Enter your last name" required>
-          
+
           <label for="password">Password</label>
           <input type="password" id="password" placeholder="Enter your password" required>
 
@@ -59,17 +110,10 @@
 
   <!-- Подвал сайта -->
   <footer>
-    <p>Contact: +123456789</p>
-    <p class="email">EXAMPLE@GMAIL.COM</p>
-</footer>
-
-<script>
-    // Initialize the Account class when the document is loaded
-    document.addEventListener('DOMContentLoaded', () => {
-        const account = new Account();
-        account.init();
-    });
-</script>
-
+    <div class="footer-container">
+      <p>Contact: +123456789</p>
+      <p class="email">EXAMPLE@GMAIL.COM</p>
+    </div>
+  </footer>
 </body>
 </html>

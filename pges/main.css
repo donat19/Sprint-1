@@ -322,3 +322,35 @@ main {
     margin-bottom: 1rem;
   }
 }
+
+.container {
+  display: flex;
+  width: fit-content;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.left {
+  flex: 0 0 auto;
+}
+
+.right {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .left, .right {
+    width: 100%;
+  }
+}
+
+
