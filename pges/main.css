@@ -263,3 +263,62 @@ main {
     min-height: calc(100vh - 7.5rem); /* 100vh минус суммарная высота header и footer */
     overflow-y: auto;
 }
+
+.layout-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.settings-sidebar {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--dark-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+}
+
+.profile-icon span {
+  color: var(--very-light-beige);
+  font-size: 2rem;
+}
+
+.profile-form {
+  flex: 1;
+}
+
+.profile-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+  
+  .settings-sidebar {
+    margin-bottom: 1rem;
+  }
+}

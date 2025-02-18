@@ -5,6 +5,7 @@
   <title>Настройки профиля</title>
   <!-- Подключаем CSS-файл со стилями -->
   <link rel="stylesheet" href="/pges/main.css">
+  <script src="account.js" defer></script>
 </head>
 <body>
 
@@ -30,45 +31,28 @@
 
   <!-- Основной контент -->
   <main>
-    <!-- Контейнер, чтобы расположить «Settings» слева и «Personal Information» справа -->
-    <div style="display: flex; max-width: 1200px; margin: 0 auto; padding: 1rem;">
-      
-      <!-- Блок «Settings» слева -->
-      <aside style="flex: 0 0 200px; margin-right: 2rem; text-align: center;">
-        <!-- Круглая иконка (пример) -->
-        <div style="
-          width: 80px; 
-          height: 80px; 
-          border-radius: 50%; 
-          background-color: var(--dark-brown); 
-          display: flex; 
-          align-items: center; 
-          justify-content: center; 
-          margin: 0 auto 0.5rem;
-        ">
-          <span style="color: var(--very-light-beige); font-size: 2rem;">+</span>
+    <div class="layout-container">
+      <aside class="settings-sidebar">
+        <div class="profile-icon">
+          <span>+</span>
         </div>
-        <h3>Acaut picture</h3>
+        <h3>Account picture</h3>
       </aside>
 
-      <!-- Карточка с формой «Personal Information» -->
-      <section class="card" style="flex: 1;">
+      <section class="card profile-form">
         <h2>Personal Information</h2>
-        
-        <!-- Поле «First Name» -->
-        <label for="first-name" style="font-weight: bold;">First Name</label>
-        <input type="text" id="first-name" placeholder="Enter your first name">
-        
-        <!-- Поле «Last Name» -->
-        <label for="last-name" style="font-weight: bold;">Last Name</label>
-        <input type="text" id="last-name" placeholder="Enter your last name">
-        
-        <!-- Поле «Password» -->
-        <label for="password" style="font-weight: bold;">Password</label>
-        <input type="password" id="password" placeholder="Enter your password">
+        <form id="profile-form">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter your first name" required>
+          
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter your last name" required>
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
 
-        <!-- Кнопка сохранения -->
-        <button style="margin-top: 1rem;">Save</button>
+          <button type="submit" class="submit-button">Save</button>
+        </form>
       </section>
     </div>
   </main>
@@ -78,6 +62,14 @@
     <p>Contact: +123456789</p>
     <p class="email">EXAMPLE@GMAIL.COM</p>
 </footer>
+
+<script>
+    // Initialize the Account class when the document is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        const account = new Account();
+        account.init();
+    });
+</script>
 
 </body>
 </html>
