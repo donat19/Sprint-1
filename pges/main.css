@@ -201,8 +201,8 @@
 
   footer {
     width: 100%;
-    background: #dce8d9;
-    padding: 8px 40px; /* Уменьшены отступы, чтобы высота была в два раза меньше */
+    background: var(--minty-pastel-green);
+    padding: 0.5rem 2.5rem; /* 8px 40px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -210,12 +210,17 @@
     bottom: 0;
     left: 0;
     z-index: 1000;
-    border-top: 2px solid #704214; /* Полосочка сверху такого же цвета, как в header */
+    border-top: 0.125rem solid var(--medium-brown);
 }
 
 footer p {
     margin: 0;
-    color: #3d2c1e;
+    color: var(--dark-brown);
+}
+
+.email {
+    position: absolute;
+    right: 8.75rem; /* 140px */
 }
   
   /* Адаптивные стили для маленьких экранов */

@@ -94,58 +94,66 @@
           </div>
         </div>
     </header>
-
     <div class="cards-container">
-        <!-- Карточка 1 -->
-        <div class="coffee-card">
-            <div class="coffee-text">
-                <h2>Cappuccino</h2>
-                <p>
-                    A classic blend of bold espresso and velvety milk foam. Every sip is a harmony of taste and texture, wrapping you in warmth and comfort.</p>
-            </div>
-            <div class="coffee-image">
-                <img src="/image/cappuccino.jpg" alt="Cappuccino">
-            </div>
-        </div>
-
-        <!-- Карточка 2 -->
-        <div class="coffee-card">
-          <div class="coffee-text">
-            <h2>Espresso</h2>
-            <p>
-             A small cup packed with bold energy. This rich, intense drink is the essence of true coffee craftsmanship, inspiring from the very first sip.</p>
-          </div>
-          <div class="coffee-image">
-            <img src="/image/espresso.jpg" alt="Espresso">
-          </div>
-        </div>
-
-        <!-- Карточка 3 -->
-        <div class="coffee-card">
-          <div class="coffee-text">
-            <h2>Mocha</h2>
-            <p>A rich fusion of espresso, chocolate, and milk, creating a decadent treat for the senses. Sweet and bold, it’s a moment of indulgence in every sip.</p>
-          </div>
-          <div class="coffee-image">
-            <img src="/image/mocha.jpg" alt="Mocha">
-          </div>
-        </div>
-
-        <!-- Карточка 4 -->
-        <div class="coffee-card">
-          <div class="coffee-text">
-            <h2>Latte</h2>
-            <p>Smooth and soothing, a latte is the perfect balance of robust espresso and creamy frothed milk. A gentle invitation to savor life’s little pleasures.</p>
-          </div>
-          <div class="coffee-image">
-            <img src="/image/latte.jpg" alt="Latte">
-          </div>
-        </div>
+        <!-- Cards will be dynamically generated -->
     </div>
     <footer>
         <p>Contact: +123456789</p>
         <p class="email">EXAMPLE@GMAIL.COM</p>
     </footer>
+    <script>
+        class CoffeeCard {
+            constructor(name, description, imageUrl) {
+                this.name = name;
+                this.description = description;
+                this.imageUrl = imageUrl;
+            }
+            
+            render() {
+                return `
+                    <div class="coffee-card">
+                        <div class="coffee-text">
+                            <h2>${this.name}</h2>
+                            <p>${this.description}</p>
+                        </div>
+                        <div class="coffee-image">
+                            <img src="${this.imageUrl}" alt="${this.name}">
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        const coffeeData = [
+            {
+                name: 'Cappuccino',
+                description: 'A classic blend of bold espresso and velvety milk foam. Every sip is a harmony of taste and texture, wrapping you in warmth and comfort.',
+                imageUrl: '/image/cappuccino.jpg'
+            },
+            {
+                name: 'Espresso',
+                description: 'A small cup packed with bold energy. This rich, intense drink is the essence of true coffee craftsmanship, inspiring from the very first sip.',
+                imageUrl: '/image/espresso.jpg'
+            },
+            {
+                name: 'Mocha',
+                description: 'A rich fusion of espresso, chocolate, and milk, creating a decadent treat for the senses. Sweet and bold, it\'s a moment of indulgence in every sip.',
+                imageUrl: '/image/mocha.jpg'
+            },
+            {
+                name: 'Latte',
+                description: 'Smooth and soothing, a latte is the perfect balance of robust espresso and creamy frothed milk. A gentle invitation to savor life\'s little pleasures.',
+                imageUrl: '/image/latte.jpg'
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.cards-container');
+            container.innerHTML = coffeeData
+                .map(data => new CoffeeCard(data.name, data.description, data.imageUrl).render())
+                .join('');
+        });
+    </script>
 </body> 
 </html>
 
