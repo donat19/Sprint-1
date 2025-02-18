@@ -1,81 +1,85 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7e9de;
+
+/* Основные цвета */
+:root {
+    --dark-brown: #3A2A1A;
+    --medium-brown: #6F4F2C;
+    --light-brown: #B89F7A;
+    --very-light-beige: #D9CFBF;
+    --minty-pastel-green: #DDEAE1;
+  }
+  
+  /* Общие стили для страницы */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--very-light-beige);
+    color: var(--dark-brown);
     margin: 0;
     padding: 0;
-    color: #3c2e2e;
-  }
-  
-  .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f3ec;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
   }
   
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    margin: 0 15px;
-    color: #3c2e2e;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .auth-buttons .btn {
-    background-color: #7a4d36;
-    color: #ffffff;
-    border: none;
-    padding: 8px 12px;
-    margin-left: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .auth-buttons .btn:hover {
-    background-color: #5b3724;
-  }
-  
-  .content {
+  /* Карточка для элементов (например, формы входа или профиля) */
+  .card {
+    background-color: var(--minty-pastel-green);
+    border-radius: 12px;
     padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
   }
   
-  .section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .description {
-    width: 60%;
-    background-color: #e7d9cb;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-    line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer {
+  /* Заголовки */
+  h1, h2 {
+    color: var(--medium-brown);
+    font-weight: bold;
     text-align: center;
+  }
+  
+  /* Формы */
+  input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
     padding: 10px;
-    background-color: #f8f3ec;
-    color: #3c2e2e;
-    font-size: 14px;
+    margin: 8px 0;
+    border: 1px solid var(--light-brown);
+    border-radius: 6px;
+    background-color: var(--very-light-beige);
+    color: var(--dark-brown);
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--medium-brown);
+    box-shadow: 0 0 5px var(--medium-brown);
+  }
+  
+  /* Кнопки */
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--medium-brown);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--dark-brown);
+  }
+  
+  /* Ссылки */
+  a {
+    color: var(--medium-brown);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+>>>>>>> 73b007a9332520fe90614fd70a25c6e82bfc45ad
   }
   
