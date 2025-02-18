@@ -175,6 +175,26 @@
   a:hover {
     text-decoration: underline;
   }
+
+
+  footer {
+    width: 100%;
+    background: #dce8d9;
+    padding: 8px 40px; /* Уменьшены отступы, чтобы высота была в два раза меньше */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    border-top: 2px solid #704214; /* Полосочка сверху такого же цвета, как в header */
+}
+
+footer p {
+    margin: 0;
+    color: #3d2c1e;
+}
   
   /* Адаптивные стили для маленьких экранов */
   @media (max-width: 37.5rem) { /* 600px */
