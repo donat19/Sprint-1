@@ -7,18 +7,100 @@
     --very-light-beige: #D9CFBF;
     --minty-pastel-green: #DDEAE1;
   }
-  
-  /* Общие стили для страницы */
-  body {
+/* Общие стили для страницы */
+body {
     font-family: 'Arial', sans-serif;
     background-color: var(--very-light-beige);
     color: var(--dark-brown);
     margin: 0;
     padding: 0;
+    /* Отступ сверху, чтобы контент не попадал под фиксированную шапку */
+    padding-top: 80px; /* Чуть уменьшили относительно 100px */
+  }
+  
+  /* Стили для header */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px; /* Уменьшенная высота */
+    background-color: var(--minty-pastel-green);
+    border-bottom: 2px solid var(--dark-brown); /* Тоньше граница */
+    /* Упростим тень */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  
+  /* Контейнер внутри header для выравнивания элементов по краям */
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  /* Стили для навигационных ссылок (слева) */
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: var(--dark-brown);
+    font-size: 20px; /* Уменьшенный шрифт */
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+    /* Уберите font-family, если не используете иконки */
+    /* font-family: "Font Awesome 5 Brands"; */
+  
+    display: flex;               
+    align-items: center;         
+    justify-content: center;     
+  }
+  
+  .nav-links a:hover {
+    color: var(--medium-brown);
+  }
+  
+  /* Стили для логотипа */
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px; /* Чтобы отделить логотип от ссылок */
+  }
+  
+/* Контейнер для кнопок, чтобы они располагались в ряд */
+.account-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Обновлённый стиль кнопок LOGIN и SINGIN */
+  .account-controls button {
+    background-color: var(--medium-brown);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 12px;  /* больше высоты (14px сверху и снизу) и меньше ширины (12px по бокам) */
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;   /* отступ между кнопками */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease;
+  }
+  
+  .account-controls button:hover {
+    background-color: var(--dark-brown);
+  }
+  
+  .account-controls button:active {
+    transform: scale(0.98);
   }
   
   /* Карточка для элементов (например, формы входа или профиля) */
@@ -29,6 +111,11 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
   }
   
   /* Заголовки */
@@ -55,7 +142,7 @@
     box-shadow: 0 0 5px var(--medium-brown);
   }
   
-  /* Кнопки */
+  /* Кнопки (общий стиль) */
   button {
     width: 100%;
     padding: 12px;
@@ -65,11 +152,21 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s ease;
   }
   
   button:hover {
     background-color: var(--dark-brown);
+  }
+  
+  button:active {
+    background-color: var(--dark-brown);
+    transform: scale(0.98); /* Легкий эффект нажатия */
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
   }
   
   /* Ссылки */
@@ -81,5 +178,13 @@
   a:hover {
     text-decoration: underline;
 >>>>>>> 73b007a9332520fe90614fd70a25c6e82bfc45ad
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 600px) {
+    .card {
+      padding: 16px;
+      max-width: 90%;
+    }
   }
   
