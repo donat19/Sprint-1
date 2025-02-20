@@ -112,6 +112,31 @@
             position: absolute;
             right: 140px;
         }
+
+        @media (max-width: 768px) {
+            /* Стили для экранов с шириной 768px и меньше */
+            body {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .auth-buttons {
+                flex-direction: column;
+                padding-right: 0;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -133,27 +158,29 @@
     
           <div class="account-controls">
             <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
-            <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
+            <button type="button" onclick="location.href='/pges/account/logout.html';">SIGNIN</button>
           </div>
         </div>
       </header>
 
-    <div class="container">
-        <h2>Name ☕</h2>
-        <div class="dropdown">
-            <button>List</button>
-            <button>▼</button>
+    <main>
+        <div class="card">
+            <h2>Name ☕</h2>
+            <div class="dropdown">
+                <button>List</button>
+                <button>▼</button>
+            </div>
+            <div class="counter">
+                <button>Count</button>
+                <button>+ 1 -</button>
+            </div>
+            <div class="counter">
+                <button>Sugar</button>
+                <button>+ 1 -</button>
+            </div>
+            <button>Next</button>
         </div>
-        <div class="counter">
-            <button>Count</button>
-            <button>+ 1 -</button>
-        </div>
-        <div class="counter">
-            <button>Sugar</button>
-            <button>+ 1 -</button>
-        </div>
-        <button>Next</button>
-    </div>
+    </main>
 
     <footer>
         <p>Contact: +123456789</p>
