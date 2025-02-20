@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coffee Shop</title>
-  <link rel="stylesheet" href="/pges/main.css" />
+  <link rel="stylesheet" href="/pages/main.css" />
   <style>
     body {
       display: flex;
@@ -108,9 +108,18 @@
     <h2>Personal Information</h2>
     <label for="first-name">First Name</label>
     <input type="text" id="first-name" placeholder="Enter your first name" required />
+    
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" placeholder="Enter your last name" required />
+    
     <label for="password">Password</label>
     <input type="password" id="password" placeholder="Enter your password" required />
-    <button>Login</button>
+    
+    <label for="confirm-password">Repeat Password</label>
+    <input type="password" id="confirm-password" placeholder="Repeat your password" required />
+    
+    <button id="create-btn">Create</button>
   </div>
+  <script src="/pages/accaunt.js"></script>
 </body>
 </html>

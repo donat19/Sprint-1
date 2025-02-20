@@ -6,9 +6,9 @@ app.use(express.static('pages'));
 
 // Redirect to menu.html at root
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/pges/menu/menu.html');
+  res.sendFile(__dirname + '/pages/menu/menu.html');
 });
 
 app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000/pges/menu/menu.html');
+  console.log('Server is running on http://localhost:3000');
 });

@@ -16,8 +16,8 @@
     }
     else{
       alert('Вы успешно зарегистрировались');
-      location.href = '/pges/account/login.html';
-      window.location.href = 'http://127.0.0.1:5500/pges/menu/menu.html';
+      location.href = '/pages/account/login.html';
+      window.location.href = 'http://127.0.0.1:5500/pages/menu/menu.html';
     }
 
   });
@@ -47,13 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
     if (isLoggedIn) {
       // Если пользователь авторизован, показываем его аватарку
       accountControls.innerHTML = `
-        <img src="${userAvatar}" alt="Аватар пользователя" class="user-avatar" onclick="location.href='/pges/account/account.html';" style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%;">
+        <img src="${userAvatar}" alt="Аватар пользователя" class="user-avatar" onclick="location.href='/pages/account/account.html';" style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%;">
       `;
     } else {
       // Если не авторизован, оставляем кнопки
       accountControls.innerHTML = `
-        <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
-        <button type="button" onclick="location.href='/pges/account/logout.html';">SIGNIN</button>
+        <button type="button" onclick="location.href='/pages/account/login.html';">LOGIN</button>
+        <button type="button" onclick="location.href='/pages/account/logout.html';">SIGNIN</button>
       `;
     }
   });
