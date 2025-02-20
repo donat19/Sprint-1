@@ -15,5 +15,8 @@
     "url": "https://github.com/donat19/Sprint-1/issues"
   },
   "homepage": "https://github.com/donat19/Sprint-1#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
