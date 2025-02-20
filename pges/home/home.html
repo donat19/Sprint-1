@@ -104,19 +104,26 @@
 <body>
     <header>
         <div class="header-container">
-            <!-- Навигационные ссылки (слева) -->
-            <div class="nav-links">
-                <img class="logo" src="/image/logo.jpg" alt="Логотип">
-                <a href="/pges/menu/menu.html">MENU</a>
-                <a href="/pges/order/order.html">ORDER</a>
-            </div>
-            <!-- Кнопки управления аккаунтом (справа) -->
-            <div class="account-controls">
-                <button type="button" onclick="location.href='/pges/login/login.html';">LOGIN</button>
-                <button type="button" onclick="location.href='/pges/singup/singup.html';">SINGIN</button>
-            </div>
+          <img src="/image/logo.jpg" alt="Логотип" class="logo">
+          
+          <input type="checkbox" id="nav-toggle">
+          <label for="nav-toggle" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+    
+          <nav class="nav-links">
+            <a href="/pges/home/home.html">HOME</a>
+            <a href="/pges/menu/menu.html">MENU</a>
+          </nav>
+    
+          <div class="account-controls">
+            <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
+            <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
+          </div>
         </div>
-    </header>
+      </header>
     
     <main>
         <div class="container" color: #3d2c1e; >
