@@ -502,9 +502,23 @@ button:active {
     gap: 2rem;
   }
 }
+
+@media (max-width: 700px) {
+  .desktop-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
 .content-wrapper {
   max-width: 1000px; /* Ограничение ширины до 1000px */
   width: 100%;       /* Занимает всю доступную ширину внутри родителя */
   margin: 0 auto;    /* Центрирование контейнера */
   padding: 0 20px;   /* При необходимости внутренние отступы */
+}
+
+@media (max-width: 700px) {
+  .content-wrapper {
+    padding: 0 10px;
+  }
 }
