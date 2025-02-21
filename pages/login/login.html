@@ -6,101 +6,34 @@
   <title>Coffee Shop</title>
   <link rel="stylesheet" href="/pages/main.css" />
   <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background-color: #f5e3cc;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      justify-content: center;
-    }
+ .container {
+  background: #eaf3eb;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;            /* Изменено на 100%, чтобы учитывать padding */
+  max-width: 450px;       /* Ограничение максимальной ширины */
+  margin: 0 auto;
+  box-sizing: border-box; /* Учитывает padding в ширине */
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
-    /* Updated selector to target the image directly */
-    .logo {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      padding: 5px;
-      background: white;
-    }
+/* Для мобильных устройств */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px; /* Уменьшенный padding для небольших экранов */
+  }
+}
 
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #3d2c1e;
-    }
-
-    .auth-buttons {
-      display: flex;
-      gap: 10px;
-      margin-left: auto;
-      padding-right: 50px;
-    }
-
-    .auth-buttons button {
-      background-color: #704214;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .container {
-      background: #eaf3eb;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      width: 450px;
-      max-width: 1200px;
-      margin: 0 auto;
-      
-      /* Added flex settings for proper alignment */
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    .dropdown,
-    .counter {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin: 10px 0;
-    }
-
-    button {
-      background: #a57c52;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .dropdown button {
-      width: 100px;
-    }
-
-    .counter button {
-      width: 70px;
-    }
   </style>
 </head>
 <body>
+  <div class="desktop-container">
+  <div class="content-wrapper">
   <!-- The image now directly uses the 'logo' class -->
   <img class="logo" src="/image/logo.jpg" alt="Логотип" />
 
@@ -111,6 +44,8 @@
     <label for="password">Password</label>
     <input type="password" id="password" placeholder="Enter your password" required />
     <button>Login</button>
+  </div>
+  </div>
   </div>
 </body>
 </html>

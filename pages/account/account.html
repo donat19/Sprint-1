@@ -13,26 +13,30 @@
   <!-- Шапка сайта -->
   <header>
     <div class="header-container">
-      <img src="/image/logo.jpg" alt="Логотип" class="logo">
-      
-      <input type="checkbox" id="nav-toggle">
-      <label for="nav-toggle" class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
-      <nav class="nav-links">
-        <a href="/pages/home/home.html">HOME</a>
-        <a href="/pages/menu/menu.html">MENU</a>
-      </nav>
-
-      <div class="account-controls">
-        <button type="button" onclick="location.href='/pages/account/login.html';">LOGIN</button>
-        <button type="button" onclick="location.href='/pages/account/logout.html';">SINGIN</button>
+      <div class="content-wrapper">
+      <div class="header-container">
+        <img src="/image/logo.jpg" alt="Логотип" class="logo">
+        
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+    
+        <nav class="nav-links">
+          <a href="/pages/home/home.html">HOME</a>
+          <a href="/pages/menu/menu.html">MENU</a>
+        </nav>
+    
+        <div class="account-controls">
+          <button type="button" onclick="location.href='/pages/login/login.html';">LOGIN</button>
+          <button type="button" onclick="location.href='pages/singup/singup.html';">SIGNIN</button>
+        </div>
       </div>
     </div>
-  </header>
+    </div>
+    </header>
 
   <!-- Основной контент -->
   <main>
@@ -68,10 +72,12 @@
 
   <!-- Подвал сайта -->
   <footer>
-    <div class="footer-container">
-      <p>Contact: +123456789</p>
-      <p class="email">EXAMPLE@GMAIL.COM</p>
+    <div class="content-wrapper">
+      <div class="blok">
+        <a class="email" href="mailto:EXAMPLE@GMAIL.COM">EXAMPLE@GMAIL.COM</a>
+        <a class="number" href="tel:+123456789">Contact: +123456789</a>
+      </div>
     </div>
-  </footer>
+</footer>
 </body>
 </html>
