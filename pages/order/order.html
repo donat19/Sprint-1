@@ -6,159 +6,54 @@
     <title>Coffee Shop</title>
     <link rel="stylesheet" href="/pages/main.css">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background-color: #f5e3cc;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            justify-content: center;
-        }
-
-        .logo img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            padding: 5px;
-            background: white;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #3d2c1e;
-        }
-
-        .auth-buttons {
-            display: flex;
-            gap: 10px;
-            margin-left: auto;
-            padding-right: 50px;
-        }
-
-        .auth-buttons button {
-            background-color: #704214;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
+        
         .container {
-            background: #eaf3eb;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            width: 450px;
-            height: 350px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+  background-color: #DDEAE1;
+  border-radius: 20px;
+  border: 1px solid #3A2A1A;
+  width: 97%; /* растягивает контейнер на всю ширину окна */
+  box-sizing: border-box; /* учитывает padding и border */
+}
 
-        .dropdown, .counter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin: 10px 0;
-        }
 
-        button {
-            background: #a57c52;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .dropdown button, .counter button {
-            width: 150px;
-        }
-
-        .counter div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
-
-        .counter div button {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        .next-button {
-            margin-top: auto;
-        }
-
-        footer {
-            width: 100%;
-            background: #dce8d9;
-            padding: 8px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 1000;
-            border-top: 2px solid #704214;
-        }
-
-        footer p {
-            margin: 0;
-            color: #3d2c1e;
-        }
-
-        .email {
-            position: absolute;
-            right: 140px;
-        }
+    
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-          <img src="/image/logo.jpg" alt="Логотип" class="logo">
-          
-          <input type="checkbox" id="nav-toggle">
-          <label for="nav-toggle" class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-    
-          <nav class="nav-links">
-            <a href="/pages/home/home.html">HOME</a>
-            <a href="/pages/menu/menu.html">MENU</a>
-          </nav>
-    
-          <div class="account-controls">
-            <button type="button" onclick="location.href='/pages/account/login.html';">LOGIN</button>
-            <button type="button" onclick="location.href='/pages/account/logout.html';">SINGIN</button>
+          <div class="content-wrapper">
+          <div class="header-container">
+            <img src="/image/logo.jpg" alt="Логотип" class="logo">
+            
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+        
+            <nav class="nav-links">
+              <a href="/pages/home/home.html">HOME</a>
+              <a href="/pages/menu/menu.html">MENU</a>
+            </nav>
+        
+            <div class="account-controls">
+              <button type="button" onclick="location.href='/pages/login/login.html';">LOGIN</button>
+              <button type="button" onclick="location.href='pages/singup/singup.html';">SIGNIN</button>
+            </div>
           </div>
         </div>
-      </header>
+        </div>
+    </header>
 
-    <div class="container">
+    <div class="content-wrapper">
+        <div class="container">
         <h2>Name ☕</h2>
         <div class="dropdown">
             <button>Size ▼</button>
@@ -181,10 +76,15 @@
         </div>
         <button class="next-button">Next</button>
     </div>
+    </div>
 
     <footer>
-        <p>Contact: +123456789</p>
-        <p class="email">EXAMPLE@GMAIL.COM</p>
+        <div class="content-wrapper">
+          <div class="blok">
+            <a class="email" href="mailto:EXAMPLE@GMAIL.COM">EXAMPLE@GMAIL.COM</a>
+            <a class="number" href="tel:+123456789">Contact: +123456789</a>
+          </div>
+        </div>
     </footer>
 
     <script>
