@@ -489,16 +489,22 @@ button:active {
 /* Новый класс для корректной ширины содержимого в десктопном режиме */
 .desktop-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   .desktop-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 2rem;
   }
+}
+.content-wrapper {
+  max-width: 1000px; /* Ограничение ширины до 1000px */
+  width: 100%;       /* Занимает всю доступную ширину внутри родителя */
+  margin: 0 auto;    /* Центрирование контейнера */
+  padding: 0 20px;   /* При необходимости внутренние отступы */
 }
