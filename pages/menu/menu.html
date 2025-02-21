@@ -6,76 +6,81 @@
   <title>Документ</title>
   <link rel="stylesheet" href="/pages/main.css">
   <style>
-    /* Основные цвета и базовый размер шрифта */
-:root {
-    --dark-brown: #3A2A1A;
-    --medium-brown: #6F4F2C;
-    --light-brown: #B89F7A;
-    --very-light-beige: #D9CFBF;
-    --minty-pastel-green: #DDEAE1;
-    font-size: 16px;
+      
+
+/* Контейнер для всех карточек */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr)); /* По умолчанию две колонки */
+  gap: 20px; 
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
-    /* Контейнер для всех карточек */
-    .cards-container {
-      display: grid;                        /* Включаем Grid Layout */
-      grid-template-columns: repeat(2, 600px); /* Два столбца фиксированной ширины 315px */
-      gap: 20px;                            /* Расстояние между карточками (по вертикали и горизонтали) */
-      justify-content: center;              /* Выравниваем карточки по центру контейнера */
-      margin: 0 auto;                       /* Горизонтально центрируем весь блок, если у контейнера будет ширина */
-      padding: 10px;                        /* Внешние отступы (по желанию) */
-    }
 
-    /* Общий стиль для каждой карточки */
-    .coffee-card {
-      width: 600px;             /* Ширина карточки */
-      height: 373px;            /* Высота карточки */
-      display: flex;            /* Располагаем текст и картинку в строку */
-      background-color: var(--minty-pastel-green);   /* Фон карточки */
-      border: 1px solid var(--medium-brown);   /* Легкая рамка */
-      border-radius: 20px;       /* Скругление углов */
-      overflow: hidden;         /* Скрыть «выходящие» части */
-      box-sizing: border-box;   /* Учитывать рамки и паддинги внутри total width/height */
-      font-family: sans-serif;  /* Шрифт по умолчанию */
-    }
+/* Общий стиль для каждой карточки */
+.coffee-card {
+  width: 100%;
+  max-width: 600px;
+  height: 373px;
+  display: flex;
+  background-color: var(--minty-pastel-green);
+  border: 1px solid var(--medium-brown);
+  border-radius: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
-    /* Блок с текстом (слева) */
-    .coffee-text {
-      flex: 1;                  /* Занимает всё доступное пространство, кроме картинки */
-      padding: 15px;            /* Внутренние отступы */
-      display: flex;            
-      flex-direction: column;
-      justify-content: center;  /* Центрируем текст по вертикали */
-    }
+/* Медиа-запрос для мобильных устройств (ширина экрана до 768px) */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* Одна карточка на строку */
+  }
+}
 
-    .coffee-text h2 {
-      margin: 0 0 10px;         /* Отступ снизу у заголовка */
-      font-size: 20px;
-      color: var(--dark-brown);
-    }
+  
 
-    .coffee-text p {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 14px;
-      color: var(--medium-brown);
-    }
-
-    /* Блок с картинкой (справа) */
-    .coffee-image {
-      width: 313px;               /* Половина карточки */
-      height: 373px;           /* Фиксированная высота равная высоте карточки */
-      display: flex;
-      justify-content: center;  
-      align-items: center;      
-      background-color: var(--light-brown);
-      overflow: hidden;         /* Предотвращает выход изображения за пределы */
-    }
-
-    .coffee-image img {
-      width: 100%;             /* Занимает всю ширину контейнера */
-      height: 100%;            /* Занимает всю высоту контейнера */
-      object-fit: cover;       /* Сохраняет пропорции, заполняя контейнер */
-    }
+      /* Блок с текстом (слева) */
+      .coffee-text {
+        flex: 1;                  /* Занимает всё доступное пространство, кроме картинки */
+        padding: 15px;            /* Внутренние отступы */
+        display: flex;            
+        flex-direction: column;
+        justify-content: center;  /* Центрируем текст по вертикали */
+      }
+  
+      .coffee-text h2 {
+        margin: 0 0 10px;         /* Отступ снизу у заголовка */
+        font-size: 20px;
+        color: var(--dark-brown);
+      }
+  
+      .coffee-text p {
+        margin: 0;
+        line-height: 1.4;
+        font-size: 14px;
+        color: var(--medium-brown);
+      }
+  
+      /* Блок с картинкой (справа) */
+      .coffee-image {
+        width: 313px;               /* Половина карточки */
+        height: 373px;           /* Фиксированная высота равная высоте карточки */
+        display: flex;
+        justify-content: center;  
+        align-items: center;      
+        background-color: var(--light-brown);
+        overflow: hidden;         /* Предотвращает выход изображения за пределы */
+      }
+  
+      .coffee-image img {
+        width: 100%;             /* Занимает всю ширину контейнера */
+        height: 100%;            /* Занимает всю высоту контейнера */
+        object-fit: cover;       /* Сохраняет пропорции, заполняя контейнер */
+      }
   </style>
 </head>
 <body>
@@ -104,21 +109,23 @@
       </div>
     </div>
     </div>
-  </header>
-  <div class="desktop-container">
+    </header>
     <div class="content-wrapper">
       <!-- Ваш контент здесь -->
       <div class="cards-container">
         <!-- Карточки генерируются скриптом -->
       </div>
     </div>
-  </div>
   
-    <footer>
-        <p>Contact: +123456789</p>
-        <p class="email">EXAMPLE@GMAIL.COM</p>
-    </footer>
-    <script>
+  <footer>
+    <div class="content-wrapper">
+      <div class="blok">
+        <a class="email" href="mailto:EXAMPLE@GMAIL.COM">EXAMPLE@GMAIL.COM</a>
+        <a class="number" href="tel:+123456789">Contact: +123456789</a>
+      </div>
+    </div>
+</footer>
+  <script>
         class CoffeeCard {
             constructor(name, description, imageUrl) {
                 this.name = name;
@@ -170,7 +177,7 @@
                 .map(data => new CoffeeCard(data.name, data.description, data.imageUrl).render())
                 .join('');
         });
-    </script>
+  </script>
 </body> 
 </html>
 
