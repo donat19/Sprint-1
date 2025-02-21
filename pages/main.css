@@ -482,3 +482,23 @@ button:active {
     width: 100%;
   }
 }
+
+/* ============================================
+   Контейнер для десктопного режима
+   ============================================ */
+/* Новый класс для корректной ширины содержимого в десктопном режиме */
+.desktop-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 1024px) {
+  .desktop-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
