@@ -5,85 +5,9 @@
   <title>Настройки профиля</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Подключаем CSS-файл со стилями -->
-  <link rel="stylesheet" href="/pges/main.css">
+  <link rel="stylesheet" href="/pages/main.css">
   <script src="account.js" defer></script>
-  <style>
-    /* Сброс стилей и установка box-sizing */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Основной контейнер для контента */
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 20px;
-      gap: 2rem;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      background-color: #B89F7A; /* Основной цвет */
-      border: 2px solid #3A2A1A; /* Цвет бордера */
-      color: #3A2A1A; /* Цвет текста */
-      padding: 0.5rem 1rem;
-      font-size: 16px;
-      border-radius: 5px;
-      outline: none;
-      transition: 0.3s;
-    }
-
-    button:hover,
-    input:focus,
-    textarea:focus,
-    select:focus {
-      background-color: #B89F7A; /* Немного затемняем при наведении */
-      border-color: #2A1A0A; /* Чуть темнее */
-    }
-
-    button {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    button:active {
-      background-color: #B89F7A;
-    }
-    .container {
-  display: flex;
-  width: fit-content;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.left {
-  flex: 0 0 auto;
-}
-
-.right {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .left, .right {
-    width: 100%;
-  }
-}
-  </style>
+ 
 </head>
 <body>
   <!-- Шапка сайта -->
@@ -99,13 +23,13 @@
       </label>
 
       <nav class="nav-links">
-        <a href="/pges/home/home.html">HOME</a>
-        <a href="/pges/menu/menu.html">MENU</a>
+        <a href="/pages/home/home.html">HOME</a>
+        <a href="/pages/menu/menu.html">MENU</a>
       </nav>
 
       <div class="account-controls">
-        <button type="button" onclick="location.href='/pges/account/login.html';">LOGIN</button>
-        <button type="button" onclick="location.href='/pges/account/logout.html';">SINGIN</button>
+        <button type="button" onclick="location.href='/pages/account/login.html';">LOGIN</button>
+        <button type="button" onclick="location.href='/pages/account/logout.html';">SINGIN</button>
       </div>
     </div>
   </header>
