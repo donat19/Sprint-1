@@ -187,15 +187,16 @@ footer {
   z-index: 1000;
 }
 
-footer p {
+footer a {
   margin: 0;
   color: var(--dark-brown);
 }
 
-/* Позиционирование элемента email в футере */
-.email {
-  position: absolute;
-  right: 8.75rem; /* 140px */
+.email{
+  left: 0%;
+}
+.number{
+  right: 0%;
 }
 
 /* ============================================
